@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: #ffb6d5;
+    font-family: 'Press Start 2P', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    text-shadow: 4px 4px #e76b9f;
+}
+
+h1 {
+    color: white;
+    font-size: clamp(17px, 4vw, 35px);
+    line-height: 1.8;
+}
+
+h2 {
+    color: #ff4f91;
+    font-size: clamp(17px, 4vw, 30px);
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.pixel-heart {
+    color: #ff367f;
+    font-size: 85px;
+    margin: 30px;
+    animation: beat 0.8s infinite alternate;
+    text-shadow: 5px 5px #c62e70;
+}
+
+p {
+    color: white;
+    font-size: 10px;
+    line-height: 2;
+}
+
+.heart {
+    position: absolute;
+    top: -60px;
+    color: #ff3c85;
+    font-size: 30px;
+    animation: fall linear forwards;
+    text-shadow: 3px 3px #d52d72;
+    pointer-events: none;
+}
+
+.message {
+    position: absolute;
+    top: -100px;
+    color: white;
+    font-size: clamp(10px, 2vw, 15px);
+    white-space: nowrap;
+    text-shadow: 3px 3px #e64c8b;
+    animation: fall linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(115vh);
+    }
+}
+
+@keyframes beat {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
